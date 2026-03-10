@@ -1,0 +1,13 @@
+services:
+  proxy:
+    build: .
+    container_name: proxy
+    ports:
+      - "14050:14050"
+      - "14051:14051"
+    environment:
+      - PROXY_USER=DvgIOJjie
+      - PROXY_PASSWORD=Cdf12SDFnDn
+      - HTTP_PORT=14050
+      - SOCKS_PORT=14051
+    restart: unless-stopped
